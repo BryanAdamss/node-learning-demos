@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>chat room</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="room"></div>
+      <div id="room-list"></div>
+      <div id="messages"></div>
+      <form id="send-form" action="">
+        <input id="send-message" />
+        <input type="submit" id="send-button" value="发送" />
+        <!-- <a href="javascript:;" id="send-button">发送</a> -->
+        <div id="help">
+          Chat commands:
+          <ul>
+            <li>改变用户名: <code>/nick [username]</code></li>
+            <li>加入/创建聊天室: <code>/join [room name]</code></li>
+          </ul>
+        </div>
+      </form>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+    <script src="./js/chat.js"></script>
+    <script src="./js/chat-ui.js"></script>
+  </body>
+</html>
